@@ -1,6 +1,6 @@
 # Notification package for Laravel4 / Laravel5
 
-[![Build Status](https://travis-ci.org/edvinaskrucas/notification.png?branch=master)](https://travis-ci.org/edvinaskrucas/notification)
+[![Build Status](https://travis-ci.org/pollend/notification.svg?branch=master)](https://travis-ci.org/pollend/notification)
 
 ---
 
