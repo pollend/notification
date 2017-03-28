@@ -1,16 +1,25 @@
-dist: trusty
-sudo: required
-
 language: php
 
+sudo: false
+
 php:
+  - 5.6
   - 7.0
   - 7.1
+  - hhvm
 
+cache:
+  directories:
+    - $HOME/.composer/cache
 
-before_script:
-  - composer self-update
-  - composer install --no-interaction
+before_install:
+  - travis_retry composer self-update
 
+install:
+  - travis_retry composer install --no-interaction --prefer-dist --no-suggest;
 
-script: phpunit
+script: vendor/bin/phpunit
+
+branches:
+  only:
+    - master
